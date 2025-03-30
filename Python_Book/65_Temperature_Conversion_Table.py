@@ -2,7 +2,9 @@
 # From 0 to 100 C that are multiples of 10 degrees Celsius.
 
 print("Table of Temperature Conversion from C to F:")
+
 print(f"{'C':<10}{'F':<10}")
+
 print("="*20)
 
 for C in range(0, 101, 10):
