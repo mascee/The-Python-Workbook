@@ -5,26 +5,37 @@ letter_grade = input("What is your grade(in letters)? ")
 letter_grade = letter_grade.capitalize()
 
 if letter_grade == "A+":
-    print(f"{letter_grade} is 4.0")
+    number_grade = 4.0
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "A":
-    print(f"{letter_grade} is 4.0")
+    number_grade = 4.0
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "A-":
-    print(f"{letter_grade} is 3.7")
+    number_grade = 3.7
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "B+":
-    print(f"{letter_grade} is 3.3")
+    number_grade = 3.3
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "B-":
-    print(f"{letter_grade} is 3.0")
+    number_grade = 3.0
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "C+":
-    print(f"{letter_grade} is 2.3")
+    number_grade = 2.3
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "C":
-    print(f"{letter_grade} is 2.0")
+    number_grade = 2.0
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "C-":
-    print(f"{letter_grade} is 1.7")
+    number_grade = 1.7
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "D+":
-    print(f"{letter_grade} is 1.3")
+    number_grade = 1.3
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "D":
-    print(f"{letter_grade} is 1.0")
+    number_grade = 1.0
+    print(f"{letter_grade} is {number_grade}")
 elif letter_grade == "F":
-    print(f"{letter_grade} is 0.0")
+    number_grade = 0.0
+    print(f"{letter_grade} is {number_grade}")
 else: 
     print("Error. ")
