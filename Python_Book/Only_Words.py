@@ -5,8 +5,7 @@
 import re
 
 def onlyWords(text):
-    words = re.findall(r'\b[a-zA-Z]+\b', text)
-    return ','.join(words)
+    return re.findall(r'\b[a-zA-Z]+\b', text)
 
 def main():
     text = input("Please type something: ")
