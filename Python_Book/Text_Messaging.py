@@ -5,6 +5,7 @@
 # Pressing the number 2, 3, 4 or 5 times generates the second, third, fourth or fifth character.
 # This program displays the key presses needed for a message entered by the user.
 # Example: For "HELLO, WORLD!" the program should output 4433555555666110966677755531111
+from Reverse_Lookup import reverseLookup
 
 key_symbols = {
     1: [".", ",", "?", "!", ":"],
