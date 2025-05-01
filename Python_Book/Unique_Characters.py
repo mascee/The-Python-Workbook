@@ -11,4 +11,3 @@ for ch in s:
 
 print(f"There are {len(characters)} unique characters in {s}. ")
 
-print(characters)
