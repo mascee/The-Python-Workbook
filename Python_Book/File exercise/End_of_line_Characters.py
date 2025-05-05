@@ -5,6 +5,7 @@ inf = open(fname, "r")
 
 num = 1
 line = inf.readline()
+
 while line != "":
     print(f"{num}, {line}")
     num+=1
