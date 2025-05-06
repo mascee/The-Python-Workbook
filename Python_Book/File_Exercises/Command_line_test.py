@@ -2,6 +2,7 @@
 
 import sys
 
+
 print(f"The program has {len(sys.argv)} command line arguments. ")
 print(f"The name of the .py file is {sys.argv[0]}")
 
