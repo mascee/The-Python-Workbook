@@ -3,26 +3,30 @@
 # The program is case insensitive.
 
 import sys
-from collections import Counter
-
 
 if len(sys.argv) != 2:
     print("Provide a file name as a command line argument. ")
     quit()
 
-try:
-    inf = open(sys.argv[1], "r")
-    letter_counts = Counter()
-    while True:
-        char = inf.read(1)
-        if not char:
-            break
-        if char.isalpha():
-            char = char.lower()
-            letter_counts[char] += 1
+letter_count = {}
 
-    for letter in sorted(letter_counts):
-        print(f"{letter}: {letter_counts[letter]}")
+try:
+    with open(sys.argv[1], "r") as inf:
+        while True:
+            char = inf.read(1)
+            if not char:
+                break
+            char = char.lower()
+            if char.isalpha():
+                if char in letter_count:
+                    letter_count[char] += 1
+                else:
+                    letter_count[char] = 1
+
+    # Print in alphabetical order
+    for letter in sorted(letter_count):
+        print(f"{letter}: {letter_count[letter]}")
+    inf.close()
 
 except IOError as e:
     print("Error occurred while processing the file.")
