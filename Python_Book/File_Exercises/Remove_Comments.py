@@ -14,10 +14,29 @@ except FileNotFoundError as e:
 
 try:
     output_file = input("Enter the output file: ")
-    out = open(output_file, "w")
+    outf = open(output_file, "w")
 except FileNotFoundError as e:
     print(f"{output_file} Not Found. ")
     quit()
+
+try:
+    #Read all lines from the input and remove comments
+    for line in inf:
+        position = line.find("#")
+        if position > -1:
+            line = line[0: position]
+            line = line + "\n"
+        #Write to the line in the output file.
+        outf.write(line) 
+
+    inf.close()
+    outf.close()
+
+except FileNotFoundError as e:
+    print("A problem was wncountered while processing the file. ")
+    quit()
+
+
 
     
 
