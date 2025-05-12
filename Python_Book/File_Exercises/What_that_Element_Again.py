@@ -22,6 +22,7 @@ with open(elements_file, "r") as file:
             "name": name
         }
 
+
 # Step 2: Handle user input
 while True:
     element = input("Please enter your element (Press Enter to quit): ").strip()
