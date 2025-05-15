@@ -5,7 +5,7 @@ chief
 fierce
 ceiling
 receipt
-weird
+weird 
 believe
 
 relief
