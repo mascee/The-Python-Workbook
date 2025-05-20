@@ -13,9 +13,22 @@ if len(argv) != 2:
     quit()
 fname = argv[1]
 
-vowels = ["A", "E", "I", "O", "U", "Y"]
+# Define the required vowel sequence
+vowel_seq = ['a', 'e', 'i', 'o', 'u', 'y']
+
+def has_vowels_in_order(word):
+    index = 0  # index in vowel_seq
+    for ch in word:
+        if index < len(vowel_seq) and ch == vowel_seq[index]:
+            index += 1
+    return index == len(vowel_seq)
+
 try:
     with open(fname, "r") as inf:
         for line in inf:
-            word = line.strip().lower().split()
-
+            word = line.strip().lower()
+            # Only consider words that contain all six vowels exactly once
+            if all(word.count(v) == 1 for v in vowel_seq) and has_vowels_in_order(word):
+                print(word)
+except FileNotFoundError as e:
+    print(f"Error: The file '{fname}' was not found.")
