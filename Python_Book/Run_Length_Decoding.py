@@ -6,9 +6,20 @@
 # Write a recursive function that decompresses a run-length encoded list.
 
 def decode(data):
-    # If there are only letters, return original list
-    if all(isinstance(item, str) and item.isalpha() for item in data):
-        return data
-    for i in data:
-        if data[i].isdigit():
-            
+    if not data:
+        return []
+    
+    symbol = data[0]
+    count = data[1]
+
+    expanded = [symbol] * count
+
+    return expanded + decode(data[2:])    
+
+
+def main():
+    data = ["A", 6, "B", 4, "C", 2]
+    print(decode(data))
+
+if __name__ == "__main__":
+    main()
